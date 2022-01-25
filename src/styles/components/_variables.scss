@@ -1,0 +1,24 @@
+//COLORS
+$PRIMARY-COLOR : #0066dd;
+$BACKGROUND-COLOR : #d9e4f5;
+$TITLE-COLOR: #344a7b;
+$ELEMENT-COLOR : #222f3e;
+$GRAY-LIGHT-COLOR :#c8d6e5;
+$GRAY-DARK-COLOR : #8395a7;
+$WHITE-COLOR : #fff;
+$RED-COLOR: rgb(183, 21, 64);
+$RED-COLOR-REDUCED: rgba(183, 21, 64, 0.3);
+
+
+@mixin flex--center{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+//BREAK-POINTS
+$LG-DESKTOP: 1920px;
+$TABLETS : 1024px;
+$S-TABLETS : 920px;
+$M-PHONE: 585px;
+$S-PHONE : 330px;

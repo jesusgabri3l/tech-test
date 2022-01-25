@@ -1,50 +1,36 @@
-import './App.css';
+import './styles/styles.scss';
 
 import React, { useState } from 'react';
-
-import logo from './logo.svg';
+import FormView from 'views/Form';
+import OptionsView from 'views/Options';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [currentView, setCurrentView] = useState('options');
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const viewHandler = (view: string) => setCurrentView(view);
+  const renderView = () => {
+    if (currentView === 'options')
+      return (
+        <OptionsView
+          viewHandler={viewHandler}
+          selectedOption={selectedOption}
+          setSelectedOption={setSelectedOption}
+        />
+      );
+    if (currentView === 'form')
+      return (
+        <FormView
+          viewHandler={viewHandler}
+          selectedOption={selectedOption}
+          setSelectedOption={setSelectedOption}
+        />
+      );
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="header">
-          🚀 Vite + React + Typescript 🤘 & <br />
-          Eslint 🔥+ Prettier
-        </p>
-
-        <div className="body">
-          <button onClick={() => setCount((count) => count + 1)}>
-            🪂 Click me : {count}
-          </button>
-
-          <p> Don&apos;t forgot to install Eslint and Prettier in Your Vscode.</p>
-
-          <p>
-            Mess up the code in <code>App.tsx </code> and save the file.
-          </p>
-          <p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer">
-              Learn React
-            </a>
-            {' | '}
-            <a
-              className="App-link"
-              href="https://vitejs.dev/guide/features.html"
-              target="_blank"
-              rel="noopener noreferrer">
-              Vite Docs
-            </a>
-          </p>
-        </div>
-      </header>
+    <div className="container">
+      <div className="menu">{renderView()}</div>
     </div>
   );
 }

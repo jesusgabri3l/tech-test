@@ -1,0 +1,40 @@
+@import "grid";
+@import "option";
+
+.menu{
+    background-color: $WHITE-COLOR;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgba(0,0,0, .16);
+    padding: 2rem;
+    position: relative;
+    @media only screen and (max-width: $S-TABLETS) {
+        height: 95vh;
+        width: 95vw;
+        padding: 1rem;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 28px;
+    }
+    &__description{
+        color: $GRAY-DARK-COLOR;
+        font-size: 18px;
+        margin-top: 10px;
+        line-height: 24px;
+        &__name{
+            color: $TITLE-COLOR;
+            font-weight: 700;
+        }
+    }
+    &__button{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        @media only screen and (max-width: $S-TABLETS) {
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
