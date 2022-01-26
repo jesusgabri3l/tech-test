@@ -24,7 +24,7 @@ function FormView({ viewHandler, selectedOption, setSelectedOption }: viewProps)
       'Your information was successfully submited, we will be in touch with you!',
     );
     viewHandler('options');
-    setSelectedOption(null);
+    setSelectedOption();
   };
   return (
     <>

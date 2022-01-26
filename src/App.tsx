@@ -6,7 +6,7 @@ import OptionsView from 'views/Options';
 
 function App() {
   const [currentView, setCurrentView] = useState('options');
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState();
 
   const viewHandler = (view: string) => setCurrentView(view);
   const renderView = () => {
