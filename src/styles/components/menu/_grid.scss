@@ -13,7 +13,7 @@
     overflow-x: hidden;
     @media only screen and (max-width: $S-TABLETS) {
         grid-template-columns: repeat(1, 1fr);
-        max-height: calc(100vh - 200px);
+        max-height: calc(100vh - 250px);
         overflow: auto;
     }
 }

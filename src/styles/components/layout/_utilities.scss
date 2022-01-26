@@ -23,6 +23,7 @@
     padding: 15px;
     min-width: 13rem;
     background-color: $GRAY-LIGHT-COLOR;
+    color: $PRIMARY-COLOR;
     font-weight: 600;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0, .16);
@@ -35,6 +36,20 @@
         }
         &:hover{
             transform: scale(1.05)
+        }
+    }
+    &--back{
+        position: absolute;
+        background-color: $PRIMARY-COLOR-REDUCED;
+        color: $PRIMARY-COLOR;
+        right: 280px;
+        bottom: 30px;
+        @media only screen and (max-width: $S-TABLETS) {
+            top: 5px;
+            right: 10px;
+            min-width: 100px !important;
+            width: 100px !important;
+            height: 50px !important;
         }
     }
     @media only screen and (max-width: $S-TABLETS) {

@@ -87,6 +87,12 @@ function FormView({ viewHandler, selectedOption, setSelectedOption }: any) {
           Continue
         </button>
       </form>
+      <button
+        className="button button--back"
+        type="button"
+        onClick={() => viewHandler('options')}>
+        Go back
+      </button>
     </>
   );
 }

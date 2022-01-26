@@ -23,6 +23,9 @@
         font-size: 18px;
         margin-top: 10px;
         line-height: 24px;
+        @media only screen and (max-width: $S-TABLETS) {
+            margin-top: 20px;
+        }
         &__name{
             color: $TITLE-COLOR;
             font-weight: 700;
