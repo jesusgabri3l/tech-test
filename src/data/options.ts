@@ -1,4 +1,4 @@
-const options = [
+const options: any[] = [
   {
     id: 1,
     name: 'Avianca',

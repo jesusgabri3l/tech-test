@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Loading from '../components/Loading';
 import Option from '../components/Option';
-import { options } from '../data/options.js';
+import { options } from '../data/options';
 import { viewProps } from '../interfaces/General';
 
 function OptionsView({ viewHandler, selectedOption, setSelectedOption }: viewProps) {
