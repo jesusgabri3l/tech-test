@@ -2,8 +2,9 @@
 import React from 'react';
 
 import avianca from '../avianca.png';
+import { optionProps } from '../interfaces/General';
 
-function Option({ option, setSelectedOption, selected }: any) {
+function Option({ option, setSelectedOption, selected }: optionProps) {
   const handleClick = () => setSelectedOption(option);
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events

@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 import Option from '../components/Option';
 import { options } from '../data/options.js';
+import { viewProps } from '../interfaces/General';
 
-function OptionsView({ viewHandler, selectedOption, setSelectedOption }: any) {
+function OptionsView({ viewHandler, selectedOption, setSelectedOption }: viewProps) {
   const [loading, setLoading] = useState(true);
   const renderOptions = () =>
     options.map((option: any) => (

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import { successAlert } from '../components/alerts/helper.ts';
-function FormView({ viewHandler, selectedOption, setSelectedOption }: any) {
+import { successAlert } from '../components/alerts/helper';
+import { viewProps } from '../interfaces/General';
+function FormView({ viewHandler, selectedOption, setSelectedOption }: viewProps) {
   const {
     register,
     handleSubmit,
@@ -30,7 +31,7 @@ function FormView({ viewHandler, selectedOption, setSelectedOption }: any) {
       <h2 className="text title menu__title">Welcome!</h2>
       <p className="text menu__description">
         We know you wanna trip on{' '}
-        <span className="text menu__description__name">{selectedOption.name}</span>,
+        <span className="text menu__description__name">{selectedOption?.name}</span>,
         please submit the form below to continue
       </p>
       <form className="grid" onSubmit={handleSubmit(submitForm)}>
